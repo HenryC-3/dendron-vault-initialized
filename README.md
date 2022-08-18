@@ -12,4 +12,4 @@
 ### bug reproduce
 
 1. 克隆该仓库
-2. 新建 branch 用于复现 dendorn 的相关 bug
+2. 新建 branch 用于复现 dendron 的相关 bug
