@@ -17,10 +17,15 @@ commands:
         enableMultiSelect: false
     insertNoteIndex:
         enableMarker: false
-    copyNoteLink: {}
+    copyNoteLink:
+        aliasMode: title
     templateHierarchy: template
 workspace:
     vaults:
+        -
+            fsPath: vault
+            seed: dendron.dendron-site
+            name: dendron.dendron-site
         -
             fsPath: .
             selfContained: true
@@ -72,6 +77,11 @@ workspace:
     maxNoteLength: 204800
     enableFullHierarchyNoteTitle: false
     enableSmartRefs: true
+    seeds:
+        dendron.dendron-site:
+            site:
+                url: https://wiki.dendron.so
+                index: dendron
 preview:
     enableFMTitle: true
     enableNoteTitleForLink: true
@@ -106,3 +116,8 @@ publishing:
     enableRandomlyColoredTags: true
     enableTaskNotes: true
     enablePrettyLinks: true
+    duplicateNoteBehavior:
+        action: useVault
+        payload:
+            - dendron.dendron-site
+            - dendron-vault-initialized
